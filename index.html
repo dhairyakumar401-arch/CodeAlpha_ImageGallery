@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LUMORA | Image Gallery</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <a href="#" class="logo">📸 LUMORA</a>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#gallery">Gallery</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-text">
+        <p class="eyebrow">DISCOVER · CAPTURE · FEEL</p>
+        <h1>Moments Beyond <span>Ordinary</span></h1>
+        <p>Explore beautiful photographs of nature, travel and architecture, all in one place.</p>
+        <a href="#gallery" class="explore-btn">Explore Gallery →</a>
+      </div>
+      <div class="hero-stats">
+        <div><strong>08</strong><span>Photographs</span></div>
+        <div><strong>04</strong><span>Categories</span></div>
+        <div><strong>∞</strong><span>Inspiration</span></div>
+      </div>
+    </section>
+
+    <section class="gallery-section" id="gallery">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">YOUR VISUAL JOURNEY</p>
+          <h2>Explore the Gallery</h2>
+        </div>
+        <input type="search" id="searchInput" placeholder="Search photos...">
+      </div>
+
+      <div class="filters">
+        <button class="filter active" data-category="all">All</button>
+        <button class="filter" data-category="nature">Nature</button>
+        <button class="filter" data-category="travel">Travel</button>
+        <button class="filter" data-category="architecture">Architecture</button>
+      </div>
+
+      <div class="gallery-grid" id="galleryGrid">
+        <article class="photo-card" data-category="nature">
+          <img src="images/Myphoto1.jpg" alt="Peaceful mountain lake">
+          <div class="photo-info"><span>Nature</span><h3>Mountain Serenity</h3></div>
+          <button class="favorite" aria-label="Add to favorites">♡</button>
+        </article>
+
+        <article class="photo-card" data-category="travel">
+          <img src="images/Myphoto2.jpg" alt="Beautiful coastal destination">
+          <div class="photo-info"><span>Travel</span><h3>Coastal Dreams</h3></div>
+          <button class="favorite" aria-label="Add to favorites">♡</button>
+        </article>
+
+        <article class="photo-card" data-category="architecture">
+          <img src="images/Myphoto3.jpg" alt="Modern architectural design">
+          <div class="photo-info"><span>Architecture</span><h3>Modern Perspective</h3></div>
+          <button class="favorite" aria-label="Add to favorites">♡</button>
+        </article>
+
+        <article class="photo-card" data-category="nature">
+          <img src="images/Myphoto4.jpg"alt="Sunlight in a green forest">
+          <div class="photo-info"><span>Nature</span><h3>Into the Woods</h3></div>
+          <button class="favorite" aria-label="Add to favorites">♡</button>
+        </article>
+
+        <article class="photo-card" data-category="travel">
+          <img src="images/Myphoto5.jpg" alt="Scenic travel landscape">
+          <div class="photo-info"><span>Travel</span><h3>Open Horizons</h3></div>
+          <button class="favorite" aria-label="Add to favorites">♡</button>
+        </article>
+
+        <article class="photo-card" data-category="architecture">
+          <img src="images/Myphoto6.jpg" alt="Minimal modern house">
+          <div class="photo-info"><span>Architecture</span><h3>Quiet Geometry</h3></div>
+          <button class="favorite" aria-label="Add to favorites">♡</button>
+        </article>
+
+        <article class="photo-card" data-category="nature">
+          <img src="images/Myphoto7.jpg" alt="Lake and mountains">
+          <div class="photo-info"><span>Nature</span><h3>Hidden Paradise</h3></div>
+          <button class="favorite" aria-label="Add to favorites">♡</button>
+        </article>
+
+        <article class="photo-card" data-category="travel">
+          <img src="images/Myphoto8.jpg" alt="Majestic mountain peaks">
+          <div class="photo-info"><span>Travel</span><h3>Above the Clouds</h3></div>
+          <button class="favorite" aria-label="Add to favorites">♡</button>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="close-btn" id="closeBtn" aria-label="Close image">×</button>
+    <button class="nav-btn" id="prevBtn" aria-label="Previous image">❮</button>
+    <img id="lightboxImg" src="" alt="">
+    <button class="nav-btn" id="nextBtn" aria-label="Next image">❯</button>
+    <p id="lightboxCaption"></p>
+  </div>
+
+  <footer>
+    <p>“Collect moments, not things.” — LUMORA</p>
+    <p>Made with ♥ for photography lovers</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
